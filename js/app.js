@@ -74,10 +74,11 @@ initMap = () => {
         let marker = new google.maps.Marker({
             position: group.lating,
             map: map,
+            animation: google.maps.Animation.DROP,
             icon: `./img/marker-${group.status}.png`
         })
 
-        // Display An InfoWindow for each Marker
+        // Click Event to each Marker
         google.maps.event.addListener(marker, 'click', () => {
 
             // InfoWindow Content
