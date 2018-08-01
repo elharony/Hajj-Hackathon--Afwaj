@@ -43,7 +43,16 @@ const mapConfig = {
         safe: {color: '#32CD32', border: '#008000'},
         warning: {color: '#B59A34', border: '#ffdc33'},
         danger: {color: '#AF393C', border: '#D40005'}
-    }
+    },
+    styles: [
+        {
+            featureType: "poi",
+            elementType: "labels",
+            stylers: [
+                  { visibility: "off" }
+            ]
+        }
+    ]
 }
 
 // Initialize Map
