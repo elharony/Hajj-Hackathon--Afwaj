@@ -1,29 +1,19 @@
 * {
-    margin: 0;
-    padding: 0
-}
+  margin: 0;
+  padding: 0; }
+
 #map {
-    height: 100%;
-}
+  height: 100%; }
+
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-
+  height: 100%;
+  margin: 0;
+  padding: 0; }
 
 /* InfoWindow */
-.infowindow {
-
-}
 .infowindow .title {
-    margin: 1rem 0
-}
-.infowindow .info li {
-    font-size: 0.9rem;
-    margin-bottom: 0.1rem
-}
-.lost-members {
+  margin: 1rem 0; }
 
-}
+.infowindow .info li {
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem; }

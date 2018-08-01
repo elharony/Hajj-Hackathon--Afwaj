@@ -1,0 +1,16 @@
+{
+  "name": "afwaj",
+  "version": "1.0.0",
+  "description": "A crowd management service for Hajj companies & prevent pilgrims from getting lost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yahya Elharony",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
