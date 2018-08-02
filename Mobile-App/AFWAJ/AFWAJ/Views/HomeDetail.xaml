@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AFWAJ;assembly=AFWAJ"
+             x:Class="AFWAJ.Views.HomeDetail"
+               Title="AFAWAJ">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Asset/styles.css" />
+    </ContentPage.Resources>
+    <StackLayout Padding="10" BackgroundColor="#14A05F">
+        <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+            <ScrollView  Orientation = "Vertical" >
+
+                <StackLayout  Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+
+                    <Image Margin="0,0,0,20" HeightRequest="170" WidthRequest="170" x:Name="logo"  VerticalOptions="Center" HorizontalOptions="Center" Source="logo_afwaj.png" >
+                    </Image>
+
+
+                    <Entry   BackgroundColor="Transparent" x:Name="usernameTxt" Placeholder = "  User"  PlaceholderColor="White"    HorizontalOptions="FillAndExpand">
+                    </Entry>
+
+                    <Entry  BackgroundColor="Transparent" x:Name="passwordEntry"  Placeholder = "  Password"    PlaceholderColor="White"  IsPassword="True"  HorizontalOptions="FillAndExpand">
+                    </Entry>
+
+                    <BoxView HeightRequest="15"></BoxView>
+                    <Button  BorderRadius="17"  x:Name="btnLogin" Clicked="LogUser"  
+                       TextColor="#14A05F" BackgroundColor="White" HeightRequest="40"  Text="Log In" HorizontalOptions="Fill"  >
+                    </Button>
+
+                    <BoxView 
+                        Margin="0,10,0,0"
+                    HeightRequest="0.75"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    BackgroundColor="White"/>
+
+                    <Label
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    Text="Forgot Your Password?">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                            NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+
+            </ScrollView>
+
+
+        </Grid>
+
+    </StackLayout>
+</ContentPage>
