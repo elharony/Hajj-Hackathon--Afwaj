@@ -158,7 +158,7 @@ const groups = [
 // Map Configurations
 const mapConfig = {
     lating: {lat: 21.422039, lng: 39.825467},
-    zoom: 16,
+    zoom: 15,
     indicators: {
         safe: {color: '#32CD32', border: '#008000'},
         warning: {color: '#B59A34', border: '#ffdc33'},
@@ -329,50 +329,54 @@ trips.map((thisTrip) => {
                             <span class="${thisTrip.group.liveData.safe > 0 ? 'notification notification-success' : 'notification'}">${thisTrip.group.liveData.safe}</span>
                             <span class="${thisTrip.group.liveData.warning > 0 ? 'notification notification-warning' : 'notification'}">${thisTrip.group.liveData.warning}</span>
                             <span class="${thisTrip.group.liveData.danger > 0 ? 'notification notification-danger' : 'notification'}">${thisTrip.group.liveData.danger}</span>
-                        </td>
-                        <td>
-                            <button type="button" class="option btn btn-default" data-toggle="modal" data-target="#modal-${thisTrip.trip.id}">
-                                <i class="material-icons">create</i>
-                            </button>
-                        </td>
-                        <div class="modal fade" id="modal-${thisTrip.trip.id}" tabindex="-1" role="dialog" aria-labelledby="modal-${thisTrip.trip.id}" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modal-${thisTrip.trip.id}">Assign A Trip Guide</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Hajj Group</label>
-                                                <input type="text" class="form-control" value="${thisTrip.group.name}" disabled>
-                                            </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating text-left">Group Guide</label>
-                                                <select class="form-control">
-                                                    <option value="Mohamed Mously">Mohamed Mously</option>
-                                                    <option value="Yahya Elharony">Yahya Elharony</option>
-                                                </select>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-success" data-dismiss="modal">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    `
+                        </td>`
 
     tripsTable.appendChild(row)
 })
+
+
+/*
+Modal within the table! [ Unused Code For now... Ready to be implemented! ]
+
+
+<td>
+    <button type="button" class="option btn btn-default" data-toggle="modal" data-target="#modal-${thisTrip.trip.id}">
+        <i class="material-icons">create</i>
+    </button>
+</td>
+<div class="modal fade" id="modal-${thisTrip.trip.id}" tabindex="-1" role="dialog" aria-labelledby="modal-${thisTrip.trip.id}" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-${thisTrip.trip.id}">Assign A Trip Guide</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Hajj Group</label>
+                        <input type="text" class="form-control" value="${thisTrip.group.name}" disabled>
+                    </div>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="bmd-label-floating text-left">Group Guide</label>
+                        <select class="form-control">
+                            <option value="Mohamed Mously">Mohamed Mously</option>
+                            <option value="Yahya Elharony">Yahya Elharony</option>
+                        </select>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+*/
