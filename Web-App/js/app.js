@@ -5,7 +5,7 @@ let map;
 const groups = [
     {
         name: 'Egypt Group',
-        id: '135',
+        id: '1',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
         company: 'Nayef For Travel',
@@ -15,7 +15,7 @@ const groups = [
     },
     {
         name: 'Malaysia Group',
-        id: '257',
+        id: '2',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
         company: 'Remas Travels',
@@ -25,7 +25,7 @@ const groups = [
     },
     {
         name: 'India Group',
-        id: '42',
+        id: '3',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
         company: 'Remas Travels',
@@ -33,11 +33,131 @@ const groups = [
         status: 'danger',
         members: {current: 160, total: 200}
     },
+    {
+        name: 'Egypt Group',
+        id: '4',
+        responsible: 'Mohamed Mously',
+        phone: '011 55 139 251',
+        company: 'Nayef For Travel',
+        lating: {lat: 21.419328, lng: 39.828872},
+        status: 'warning',
+        members: {current: 120, total: 125}
+    },
+    {
+        name: 'Malaysia Group',
+        id: '5',
+        responsible: 'Yahya Elharony',
+        phone: '012 34 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.419904, lng: 39.823520},
+        status: 'safe',
+        members: {current: 190, total: 190}
+    },
+    {
+        name: 'India Group',
+        id: '6',
+        responsible: 'Moamen Mohamed',
+        phone: '012 75 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.420923, lng: 39.825205},
+        status: 'danger',
+        members: {current: 160, total: 200}
+    },
+    {
+        name: 'Egypt Group',
+        id: '7',
+        responsible: 'Mohamed Mously',
+        phone: '011 55 139 251',
+        company: 'Nayef For Travel',
+        lating: {lat: 21.422905, lng: 39.822147},
+        status: 'warning',
+        members: {current: 120, total: 125}
+    },
+    {
+        name: 'Malaysia Group',
+        id: '8',
+        responsible: 'Yahya Elharony',
+        phone: '012 34 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.425996, lng: 39.824606},
+        status: 'safe',
+        members: {current: 190, total: 190}
+    },
+    {
+        name: 'India Group',
+        id: '9',
+        responsible: 'Moamen Mohamed',
+        phone: '012 75 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.424547, lng: 39.827719},
+        status: 'danger',
+        members: {current: 160, total: 200}
+    },
+    {
+        name: 'Egypt Group',
+        id: '10',
+        responsible: 'Mohamed Mously',
+        phone: '011 55 139 251',
+        company: 'Nayef For Travel',
+        lating: {lat: 21.423593, lng: 39.825103},
+        status: 'warning',
+        members: {current: 120, total: 125}
+    },
+    {
+        name: 'Malaysia Group',
+        id: '11',
+        responsible: 'Yahya Elharony',
+        phone: '012 34 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.423992, lng: 39.828107},
+        status: 'safe',
+        members: {current: 190, total: 190}
+    },
+    {
+        name: 'India Group',
+        id: '12',
+        responsible: 'Moamen Mohamed',
+        phone: '012 75 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.422254, lng: 39.830017},
+        status: 'danger',
+        members: {current: 160, total: 200}
+    },
+    {
+        name: 'Egypt Group',
+        id: '13',
+        responsible: 'Mohamed Mously',
+        phone: '011 55 139 251',
+        company: 'Nayef For Travel',
+        lating: {lat: 21.422956, lng: 39.822315},
+        status: 'warning',
+        members: {current: 120, total: 125}
+    },
+    {
+        name: 'Malaysia Group',
+        id: '14',
+        responsible: 'Yahya Elharony',
+        phone: '012 34 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.423720, lng: 39.822831},
+        status: 'safe',
+        members: {current: 190, total: 190}
+    },
+    {
+        name: 'India Group',
+        id: '15',
+        responsible: 'Moamen Mohamed',
+        phone: '012 75 567 809',
+        company: 'Remas Travels',
+        lating: {lat: 21.424479, lng: 39.824719},
+        status: 'danger',
+        members: {current: 160, total: 200}
+    },
 ]
 
 // Map Configurations
 const mapConfig = {
-    lating: {lat: 21.421, lng: 39.818},
+    lating: {lat: 21.422039, lng: 39.825467},
     zoom: 15,
     indicators: {
         safe: {color: '#32CD32', border: '#008000'},
@@ -143,8 +263,8 @@ const trips = [
         group: {
             name: 'PAK-129',
             pilgrims: 120,
-            statusCondition: 'danger',
-            statusText: 'Stopped',
+            statusCondition: 'success',
+            statusText: 'Ongoing',
             liveData: {
                 safe: 118,
                 warning: 0,
@@ -229,12 +349,12 @@ trips.map((thisTrip) => {
                                             <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Hajj Group</label>
-                                                <input type="text" class="form-control" value="Egypt Group" disabled>
+                                                <input type="text" class="form-control" value="${thisTrip.group.name}" disabled>
                                             </div>
                                             </div>
                                             <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="bmd-label-floating">Group Guide</label>
+                                                <label class="bmd-label-floating text-left">Group Guide</label>
                                                 <select class="form-control">
                                                     <option value="Mohamed Mously">Mohamed Mously</option>
                                                     <option value="Yahya Elharony">Yahya Elharony</option>
