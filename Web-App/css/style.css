@@ -54,3 +54,14 @@ table button.option {
   border-radius: 50%; }
   table button.option i {
     margin-top: -1.1em; }
+
+.main-panel > .content {
+  padding: 0 15px; }
+
+@media all and (min-width: 992px) {
+  .navbar {
+    display: none !important; } }
+
+@media all and (min-width: 992px) {
+  .content {
+    margin-top: 0 !important; } }
