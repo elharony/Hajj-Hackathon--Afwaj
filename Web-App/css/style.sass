@@ -13,7 +13,7 @@ html, body
 
 /*** Map ***/
 #map
-    height: 400px
+    height: 275px
 
 
 /* InfoWindow */
@@ -41,6 +41,9 @@ html, body
     width: 50px
     height: 50px
 
+.trips
+    .card
+        margin-top: 0
 
 table 
     .notification
@@ -86,7 +89,8 @@ table
     margin: 0 15px
     background: #ffffff
     .heading
-        padding: 5px
+        font-size: 1.063rem
+        padding: 12px 8px
         text-align: center
         background: #343A40
         color: #ffffff
@@ -95,18 +99,21 @@ table
         padding: 5px
         li
             position: relative
-            left: -100%
+            left: -140%
             padding: 7px 5px
             margin: 14px
-            background: #F6F8FA
+            color: #ffffff
             list-style: none
             box-shadow: 0 16px 18px -12px rgba(185, 185, 185, 0.5)
-            animation: animateMessage 300ms ease-in forwards
+            animation: animateMessage 250ms cubic-bezier(.02,1.22,1,1.23) forwards
             p
                 margin-bottom: 0
         li:nth-child(1)
+            margin-top: 6px
+            background: #ff9800
             animation-delay: 1s
         li:nth-child(2)
+            background: #f44336
             animation-delay: 2s
 
 
