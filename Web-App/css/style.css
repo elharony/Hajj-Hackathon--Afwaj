@@ -96,7 +96,7 @@ table button.option {
       color: #ffffff;
       list-style: none;
       box-shadow: 0 16px 18px -12px rgba(185, 185, 185, 0.5);
-      animation: animateMessage 250ms cubic-bezier(0.02, 1.22, 1, 1.23) forwards; }
+      animation: animateMessage 500ms cubic-bezier(0.02, 1.22, 1, 1) forwards; }
       .chat-container .chatbox li p {
         margin-bottom: 0; }
     .chat-container .chatbox li:nth-child(1) {
