@@ -65,3 +65,23 @@ table button.option {
 @media all and (min-width: 992px) {
   .content {
     margin-top: 0 !important; } }
+
+.chat-container {
+  height: 60vh;
+  margin: 0 15px;
+  background: #ffffff; }
+  .chat-container .heading {
+    padding: 5px;
+    text-align: center;
+    background: #343A40;
+    color: #ffffff; }
+  .chat-container .chatbox {
+    padding: 5px; }
+    .chat-container .chatbox li {
+      padding: 7px 5px;
+      margin: 14px;
+      background: #F6F8FA;
+      list-style: none;
+      box-shadow: 0 16px 18px -12px rgba(185, 185, 185, 0.5); }
+      .chat-container .chatbox li p {
+        margin-bottom: 0; }
