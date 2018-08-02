@@ -158,7 +158,7 @@ const groups = [
 // Map Configurations
 const mapConfig = {
     lating: {lat: 21.422039, lng: 39.825467},
-    zoom: 15,
+    zoom: 16,
     indicators: {
         safe: {color: '#32CD32', border: '#008000'},
         warning: {color: '#B59A34', border: '#ffdc33'},
