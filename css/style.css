@@ -21,3 +21,9 @@ html, body {
 .infowindow .info li {
   font-size: 0.9rem;
   margin-bottom: 0.1rem; }
+
+/*** Admin Panel ***/
+.sidebar .logo {
+  padding: 15px; }
+  .sidebar .logo img {
+    width: 100%; }
