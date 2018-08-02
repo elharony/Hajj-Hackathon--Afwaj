@@ -66,6 +66,12 @@ table button.option {
   .content {
     margin-top: 0 !important; } }
 
+@keyframes animateMessage {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
 .chat-container {
   height: 60vh;
   margin: 0 15px;
@@ -76,12 +82,20 @@ table button.option {
     background: #343A40;
     color: #ffffff; }
   .chat-container .chatbox {
+    position: relative;
     padding: 5px; }
     .chat-container .chatbox li {
+      position: relative;
+      left: -100%;
       padding: 7px 5px;
       margin: 14px;
       background: #F6F8FA;
       list-style: none;
-      box-shadow: 0 16px 18px -12px rgba(185, 185, 185, 0.5); }
+      box-shadow: 0 16px 18px -12px rgba(185, 185, 185, 0.5);
+      animation: animateMessage 300ms ease-in forwards; }
       .chat-container .chatbox li p {
         margin-bottom: 0; }
+    .chat-container .chatbox li:nth-child(1) {
+      animation-delay: 1s; }
+    .chat-container .chatbox li:nth-child(2) {
+      animation-delay: 2s; }
