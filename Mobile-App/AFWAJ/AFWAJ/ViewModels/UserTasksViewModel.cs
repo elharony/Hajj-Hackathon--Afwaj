@@ -19,6 +19,7 @@ namespace AFWAJ.ViewModels
         public event LoadComplete LoadDone;
         public UserTasksViewModel ()
         {
+  
             LoadWS();
         }
 

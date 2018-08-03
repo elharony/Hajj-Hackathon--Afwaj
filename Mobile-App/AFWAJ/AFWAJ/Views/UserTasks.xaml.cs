@@ -11,25 +11,33 @@ namespace AFWAJ.Views
 {
 	public partial class UserTasks : ContentPage
 	{
-	    UserTasksViewModel model = new UserTasksViewModel();
+	    //UserTasksViewModel model = new UserTasksViewModel();
 
         public UserTasks ()
 		{
 			InitializeComponent ();
-		    BindingContext = model;
-		    model.LoadDone += delegate
-		    {
-		        TasksListView.ItemsSource = model.UserRoutes;
-            };
-
+		  //  BindingContext = model;
+		 //   model.LoadDone += delegate
+		    //{
+		    //  //  TasksListView.ItemsSource = model.UserRoutes;
+      //      };
 
 		}
+    	  
 
-	  
+	    //private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
+	    //{
+	    //    Navigation.PushAsync(new GroupTracking());
+	    //}
 
 	    private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
 	    {
 	        Navigation.PushAsync(new GroupTracking());
 	    }
-	}
+
+	    private void Btnpass_OnClicked(object sender, EventArgs e)
+	    {
+	        Navigation.PushAsync(new GroupTracking());
+	    }
+    }
 }

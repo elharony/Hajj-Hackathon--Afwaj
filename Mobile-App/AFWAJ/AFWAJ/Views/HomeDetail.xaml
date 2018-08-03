@@ -41,10 +41,7 @@
                     VerticalOptions="Center"
                     TextColor="White"
                     Text="Forgot Your Password?">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer
-                            NumberOfTapsRequired="1" />
-                        </Label.GestureRecognizers>
+   
                     </Label>
 
                 </StackLayout>

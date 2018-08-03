@@ -1,26 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AFWAJ.Views.GroupTracking">
+             x:Class="AFWAJ.Views.GroupTracking"
+             Title="Haj List">
     <ContentPage.Content>
-        <StackLayout>
-          <ListView x:Name="HajjListView">
-              <ListView.ItemTemplate>
-                  <DataTemplate>
-                      <ViewCell>
-                          <StackLayout BackgroundColor="#eee"
-                                       Orientation="Vertical">
-                              <StackLayout Orientation="Horizontal">
-                                    <Image WidthRequest="10" Source="{Binding photoURL}" />
-                                    <Label Text="{Binding Name}"
-                                         TextColor="{Binding StausColor}" />
-                                  
-                              </StackLayout>
-                          </StackLayout>
-                      </ViewCell>
-                  </DataTemplate>
-              </ListView.ItemTemplate>
-            </ListView>
+        <StackLayout >
+            <StackLayout Orientation="Vertical" >
+                <Grid>
+                    <Label   Text="HAJ LIST"   HorizontalOptions="Center" VerticalOptions="Center" FontSize="30" />
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image    Source="Green.png" Grid.Column="0" HorizontalOptions="Center" />
+                    <Label x:Name="lbltotla"   Text="0" Grid.Column="0"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="30" FontAttributes="Bold" TextColor="White" />
+                    <Image    Source="Red.png" Grid.Column="1"  HorizontalOptions="Center" />
+                    <Label x:Name="lblmissing"   Text="0" Grid.Column="1"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="30" FontAttributes="Bold" TextColor="White" />
+                </Grid>
+                <StackLayout Orientation="Horizontal">
+                         <ListView x:Name="HajjListView" SelectionMode="None" ItemTapped="HajjListView_ItemTapped" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell >
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image   WidthRequest="30" Source="{Binding photoURL}" Grid.Column="0" />
+                                        <Label   Text="{Binding Name}" Grid.Column="1" VerticalOptions="Center" />
+                                        <Switch   IsToggled="{Binding Status}" Grid.Column="2" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                 </StackLayout>
+                <BoxView HeightRequest="4" BackgroundColor="Black"></BoxView>
+                <Button  BorderRadius="17"  x:Name="BtnStart" Clicked="BtnStart_OnClicked"   
+                         TextColor="White" BackgroundColor="#14A05F" HeightRequest="40"  Text="Start Trip" HorizontalOptions="Center"  >
+                </Button>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

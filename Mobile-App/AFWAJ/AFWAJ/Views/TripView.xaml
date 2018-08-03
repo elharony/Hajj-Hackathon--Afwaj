@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Trip"
+             x:Class="AFWAJ.Views.TripView">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Orientation="Vertical" >
+                <Grid>
+                    <Label   Text="FROM MAKKAH TO JEDDAH"   HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="20" />
+                </Grid>
+                <Grid Padding="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <BoxView HeightRequest="40" BackgroundColor="Green" Grid.Column="0"></BoxView>
+                    <Label   x:Name="lblG" Text="" Grid.Column="0"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                    <BoxView HeightRequest="40" BackgroundColor="Yellow" Grid.Column="1"></BoxView>
+                    <Label  x:Name="lblY" Text="0" Grid.Column="1"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                    <BoxView HeightRequest="40" BackgroundColor="Brown" Grid.Column="2"></BoxView>
+                    <Label  x:Name="lblR" Text="0" Grid.Column="2"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                </Grid>
+                <Grid>
+                    <Image Source="map.png"   WidthRequest="500"   HeightRequest="500" VerticalOptions="StartAndExpand"  ></Image>
+                </Grid>
+                     
+                 
+                <StackLayout Orientation="Horizontal" >
+ 
+                    <ListView x:Name="HajjListView" SelectionMode="None" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="5" BackgroundColor="{Binding StatusColor}" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image   WidthRequest="30" Source="{Binding photoURL}" Grid.Column="0" />
+                                        <Label   Text="{Binding Name}" Grid.Column="1" VerticalOptions="Center" TextColor="White" />
+                                        <Image   WidthRequest="30" Source="callicon.png" Grid.Column="2" HorizontalOptions="End" />
+
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <Button  BorderRadius="17"  x:Name="btnLogin"   
+                         TextColor="White" BackgroundColor="#14A05F" HeightRequest="40"  Text="End Trip" HorizontalOptions="Center"  >
+                </Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

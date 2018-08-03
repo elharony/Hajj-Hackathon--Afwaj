@@ -19,6 +19,8 @@ namespace AFWAJ.Views
         private void LogUser()
         {
             Navigation.PushAsync(new UserTasks(), true);
+          //  Navigation.PushAsync(new Profile(), true);
+
         }
     }
 }

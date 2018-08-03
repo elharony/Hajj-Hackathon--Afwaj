@@ -17,7 +17,7 @@ namespace AFWAJ.ViewModels
 
         public GroupTrackingViewModel()
         {
-            LoadWS();
+            //LoadWS();
         }
 
         private async void LoadWS()
@@ -31,7 +31,7 @@ namespace AFWAJ.ViewModels
                 {
                     { "P1", "1" },
                     { "P2", "1" },
-                    { "Pass", "" }
+                    { "Pass", "" }  
                 };
 
                 string respo = await DataAccess.sharedService().SendSOAPRequestAsync(url,

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#22B46B"
+             Title="Haj Info"
+             x:Class="AFWAJ.Views.Profile">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="profile1234.jpg"  RelativeLayout.WidthConstraint=  "{ConstraintExpression Type=RelativeToParent, Property=Width}"  RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+        </RelativeLayout>
+
+        <!--<Grid  Padding="0,20,0,0"
+					Grid.Row="0" 
+					BackgroundColor="White">
+
+        
+            <StackLayout Padding="0" Grid.Row="0" Grid.Column="0">
+       
+           
+                <Image  Source="icon_man.png" HeightRequest="150" WidthRequest="150"></Image>
+                <Label Text="Mohammed" FontSize="Large" TextColor="Black"></Label>
+                <BoxView   HeightRequest="1" 
+							 BackgroundColor="Black" />
+           
+            </StackLayout>
+            <Label Grid.Row="1" Text="Z
+                   ">
+                
+            </Label>
+            <Label Grid.Row="2" Text="Name">
+
+            </Label>
+            <Label Grid.Row="3" Text="Name">
+
+            </Label>
+            <Label Grid.Row="4" Text="Name">
+
+            </Label>
+
+        </Grid>-->
+        
+
+    </ContentPage.Content>
+</ContentPage>

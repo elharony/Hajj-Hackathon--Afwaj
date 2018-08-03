@@ -23,6 +23,8 @@ namespace AFWAJ.Views
 
             BindingContext = new HomeMasterViewModel();
             ListView = MenuItemsListView;
+
+
         }
 
         class HomeMasterViewModel : INotifyPropertyChanged
@@ -33,8 +35,9 @@ namespace AFWAJ.Views
             {
                 MenuItems = new ObservableCollection<HomeMenuItem>(new[]
                 {
-                    new HomeMenuItem { Id = 0, Title = "Page 1" },
-                  
+                    new HomeMenuItem { Id = 0, Title = "Home" },
+                
+
                 });
             }
             

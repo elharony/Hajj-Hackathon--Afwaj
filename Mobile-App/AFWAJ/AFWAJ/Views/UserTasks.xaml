@@ -1,60 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AFWAJ.Views.UserTasks" Title="Groups">
+             x:Class="AFWAJ.Views.UserTasks" Title="Current Group" BackgroundColor="White">
     <ContentPage.Content>
 
-        <Grid >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+        <StackLayout BackgroundColor="Transparent" Padding="20,40,20,10" VerticalOptions="StartAndExpand" HorizontalOptions="Center" >
+            <Label  Text="Group Info"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="30" />
 
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="Auto"/>
-
-            </Grid.RowDefinitions>
-
-            <Label
-              Grid.Column="0"
-              Grid.Row="0"
-              Text=" Your Groups"
-                FontAttributes="Bold"
-              TextColor="Black"
-              HorizontalTextAlignment="Center"
-              Style="{DynamicResource SubtitleStyle}"/>
-            <BoxView      Grid.Column="0"
-              Grid.Row="1"
-                        Margin="0,10,0,0"
+            <BoxView 
+                        Margin="0,5,0,0"
                     HeightRequest="0.75"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"
                     WidthRequest="300"
-                    BackgroundColor="White"/>
+                    BackgroundColor="Black"/>
+
+            <Grid Padding="0,40,0,70">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
 
 
-            <ListView Grid.Column="0"
-              Grid.Row="2"   x:Name="TasksListView" HasUnevenRows="true" ItemTapped="OnListViewItemTapped">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                <!--<Label Text=" "{Binding HajGroupID}"  Grid.Row="0" Grid.Column="0" ></Label>-->
-                                <!--<Label Grid.Row="0" Grid.Column="1" ></Label>
-                                <Label Grid.Row="1" Grid.Column="2"></Label>-->
+                <Grid  Grid.Row="0" Grid.Column="0" x:Name="TasksListView">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <!--<Label Text=" "{Binding HajGroupID}"  Grid.Row="0" Grid.Column="0" ></Label>-->
+                    <!--<Label Grid.Row="0" Grid.Column="1" ></Label>
+                                <Label Grid.Row="1" Grid.Column="2"></Label>
                                 <Label Grid.Column="0" Text="Group #"   />
-                                <Label Grid.Column="1" Text="{Binding HajGroupID}"   />
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
-        </Grid>
+                                <Label Grid.Column="1" Text="{Binding HajGroupID}"   />-->
+
+                    <Label  Grid.Row="0" Grid.Column="0"  Text="Group Number:"   FontAttributes="Bold"  ></Label>
+                    <Label  Grid.Row="0" Grid.Column="1" Text="K-082"   ></Label>
+                    <Label  Grid.Row="1" Grid.Column="0" Text="Date and Time:"   FontAttributes="Bold"  ></Label>
+                    <Label  Grid.Row="1" Grid.Column="1" Text="1/3/2018 : 9:56 AM"   ></Label>
+                    <Label  Grid.Row="2" Grid.Column="0" Text="Location:" FontAttributes="Bold" ></Label>
+                    <Label  Grid.Row="2" Grid.Column="1" Text="Haram - Hotel"  ></Label>
+                    <Label  Grid.Row="3" Grid.Column="0" Text="Number of Pilgrim in Group:"   FontAttributes="Bold" HorizontalTextAlignment="Center"  FontSize="15" ></Label>
+                    <Label  Grid.Row="3" Grid.Column="1" FontSize="19" Text="3" HorizontalTextAlignment="Center"></Label>
+
+                </Grid>
+
+                <Button  Grid.Row="1" Grid.Column="0"  BorderRadius="17" Clicked="Btnpass_OnClicked"
+                       TextColor="White" BackgroundColor="#14A05F"  Text="Detecting Haj"   >
+                </Button>
+
+            </Grid>
+        </StackLayout>
+
+
     </ContentPage.Content>
 </ContentPage>
