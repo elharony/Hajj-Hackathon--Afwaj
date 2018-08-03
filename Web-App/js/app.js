@@ -1,20 +1,20 @@
-/* Map */
-let map;
+// Map
+let map
 
 // Groups Locations
 const groups = [
     {
-        name: 'Egypt Group',
+        name: 'Group A-01',
         id: '1',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
         company: 'Nayef For Travel',
         lating: {lat: 21.4225054, lng: 39.8259356},
-        status: 'warning',
+        status: 'safe',
         members: {current: 120, total: 125}
     },
     {
-        name: 'Malaysia Group',
+        name: 'Group A-02',
         id: '2',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
@@ -24,27 +24,27 @@ const groups = [
         members: {current: 190, total: 190}
     },
     {
-        name: 'India Group',
+        name: 'Group A-03',
         id: '3',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
         company: 'Remas Travels',
         lating: {lat: 21.4185168, lng: 39.8248074},
-        status: 'danger',
+        status: 'safe',
         members: {current: 160, total: 200}
     },
     {
-        name: 'Egypt Group',
+        name: 'Group A-04',
         id: '4',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
         company: 'Nayef For Travel',
         lating: {lat: 21.419328, lng: 39.828872},
-        status: 'warning',
+        status: 'safe',
         members: {current: 120, total: 125}
     },
     {
-        name: 'Malaysia Group',
+        name: 'Group A-05',
         id: '5',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
@@ -54,7 +54,7 @@ const groups = [
         members: {current: 190, total: 190}
     },
     {
-        name: 'India Group',
+        name: 'Group A-06',
         id: '6',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
@@ -64,7 +64,7 @@ const groups = [
         members: {current: 160, total: 200}
     },
     {
-        name: 'Egypt Group',
+        name: 'Group A-07',
         id: '7',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
@@ -74,7 +74,7 @@ const groups = [
         members: {current: 120, total: 125}
     },
     {
-        name: 'Malaysia Group',
+        name: 'Group A-08',
         id: '8',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
@@ -84,7 +84,7 @@ const groups = [
         members: {current: 190, total: 190}
     },
     {
-        name: 'India Group',
+        name: 'Group A-09',
         id: '9',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
@@ -94,7 +94,7 @@ const groups = [
         members: {current: 160, total: 200}
     },
     {
-        name: 'Egypt Group',
+        name: 'Group A-10',
         id: '10',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
@@ -104,7 +104,7 @@ const groups = [
         members: {current: 120, total: 125}
     },
     {
-        name: 'Malaysia Group',
+        name: 'Group A-11',
         id: '11',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
@@ -114,27 +114,27 @@ const groups = [
         members: {current: 190, total: 190}
     },
     {
-        name: 'India Group',
+        name: 'Group A-12',
         id: '12',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
         company: 'Remas Travels',
         lating: {lat: 21.422254, lng: 39.830017},
-        status: 'danger',
+        status: 'safe',
         members: {current: 160, total: 200}
     },
     {
-        name: 'Egypt Group',
+        name: 'Group A-13',
         id: '13',
         responsible: 'Mohamed Mously',
         phone: '011 55 139 251',
         company: 'Nayef For Travel',
         lating: {lat: 21.422956, lng: 39.822315},
-        status: 'warning',
+        status: 'safe',
         members: {current: 120, total: 125}
     },
     {
-        name: 'Malaysia Group',
+        name: 'Group A-14',
         id: '14',
         responsible: 'Yahya Elharony',
         phone: '012 34 567 809',
@@ -144,93 +144,16 @@ const groups = [
         members: {current: 190, total: 190}
     },
     {
-        name: 'India Group',
+        name: 'Group A-15',
         id: '15',
         responsible: 'Moamen Mohamed',
         phone: '012 75 567 809',
         company: 'Remas Travels',
         lating: {lat: 21.424479, lng: 39.824719},
-        status: 'danger',
+        status: 'safe',
         members: {current: 160, total: 200}
     },
 ]
-
-// Map Configurations
-const mapConfig = {
-    lating: {lat: 21.422039, lng: 39.825467},
-    zoom: 15,
-    indicators: {
-        safe: {color: '#32CD32', border: '#008000'},
-        warning: {color: '#B59A34', border: '#ffdc33'},
-        danger: {color: '#AF393C', border: '#D40005'}
-    },
-    styles: [
-        {
-            featureType: "poi",
-            elementType: "labels",
-            stylers: [
-                  { visibility: "off" }
-            ]
-        }
-    ]
-}
-
-// Initialize Map
-initMap = () => {
-    const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: mapConfig.zoom,
-        center: mapConfig.lating,
-        mapTypeId: 'terrain',
-        styles: mapConfig.styles
-    })
-
-    // InfoWindow Instance
-    let infowindow = new google.maps.InfoWindow()
-
-    // Display All Markers
-    groups.map((group) => {
-
-        // Marker Instance
-        let marker = new google.maps.Marker({
-            position: group.lating,
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: `./img/marker-${group.status}.png`
-        })
-
-        // Click Event to each Marker
-        google.maps.event.addListener(marker, 'click', () => {
-
-            // InfoWindow Content
-            let content = `<div class='infowindow'>
-                <h2 class='title'>${group.name}</h2>
-                <ul class='info'>
-                    <li><i class="fas fa-hashtag fa-fw"></i> Group ID: ${group.id}</li>
-                    <li><i class="fas fa-users fa-fw"></i> Members: ${group.members.current}/${group.members.total}</li>
-                    <li><i class="fas fa-user-tie fa-fw"></i> Responsible: ${group.responsible}</li>
-                    <li><i class="fas fa-mobile fa-fw"></i> Phone: ${group.phone}</li>
-                    <li><i class="fas fa-building fa-fw"></i> Company: ${group.company}</li>
-                </ul>
-                <ul class='lost-members'>
-                </ul>
-            </div>`
-
-            // Set the content
-            infowindow.setContent(content)
-
-            // Open the InfoWindow on Click
-            infowindow.open(map, marker)
-        })
-    })
-}
-
-
-
-
-
-
-
-/******* Trips *******/
 
 // Trips [ Data ]
 const trips = [
@@ -311,6 +234,76 @@ const trips = [
         }
     }
 ]
+
+// Map Configurations
+const mapConfig = {
+    lating: {lat: 21.422039, lng: 39.825467},
+    zoom: 15,
+    indicators: {
+        safe: {color: '#32CD32', border: '#008000'},
+        warning: {color: '#B59A34', border: '#ffdc33'},
+        danger: {color: '#AF393C', border: '#D40005'}
+    },
+    styles: [
+        {
+            featureType: "poi",
+            elementType: "labels",
+            stylers: [
+                  { visibility: "off" }
+            ]
+        }
+    ]
+}
+
+// Initialize Map
+initMap = () => {
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: mapConfig.zoom,
+        center: mapConfig.lating,
+        mapTypeId: 'terrain',
+        styles: mapConfig.styles
+    })
+
+    // InfoWindow Instance
+    let infowindow = new google.maps.InfoWindow()
+
+    // Display All Markers
+    groups.map((group) => {
+
+        // Marker Instance
+        let marker = new google.maps.Marker({
+            position: group.lating,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            icon: `./img/marker-${group.status}.png`
+        })
+
+        // Click Event to each Marker
+        google.maps.event.addListener(marker, 'click', () => {
+
+            // InfoWindow Content
+            let content = `<div class='infowindow'>
+                <h2 class='title'>${group.name}</h2>
+                <ul class='info'>
+                    <li><i class="fas fa-hashtag fa-fw"></i> Group ID: ${group.id}</li>
+                    <li><i class="fas fa-users fa-fw"></i> Members: ${group.members.current}/${group.members.total}</li>
+                    <li><i class="fas fa-user-tie fa-fw"></i> Responsible: ${group.responsible}</li>
+                    <li><i class="fas fa-mobile fa-fw"></i> Phone: ${group.phone}</li>
+                    <li><i class="fas fa-building fa-fw"></i> Company: ${group.company}</li>
+                </ul>
+                <ul class='lost-members'>
+                </ul>
+            </div>`
+
+            // Set the content
+            infowindow.setContent(content)
+
+            // Open the InfoWindow on Click
+            infowindow.open(map, marker)
+        })
+    })
+}
+
 
 // Trips [ Update the UI ]
 const tripsTable = document.querySelector(".trips-table")
