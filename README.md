@@ -13,7 +13,7 @@ We built it in 2 versions - Web and Mobile - using:
 - Web Stack: `HTML5`, `CSS3`, `JavaScript`, `Material Design`
 
 ## What's inside?
-### Web App:
+### Web App: [Live Preview Available](https://elharony.github.io/Hajj-Hackathon--Afwaj/)
 
 ![Afwaj - Web Version](https://user-images.githubusercontent.com/16986422/43621694-7054a4f2-96e1-11e8-93f2-361086436e28.png)
 ### Mobile App:
