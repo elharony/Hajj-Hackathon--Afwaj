@@ -12,10 +12,12 @@ We built it in 2 versions - Web and Mobile - using:
 - Mobile Stack: `C#`, `XAML`, `Xamarin`
 - Web Stack: `HTML5`, `CSS3`, `JavaScript`, `Material Design`
 
-## Screenshots
-- Inside the Web:
+## What's inside?
+### Web App:
+
 ![Afwaj - Web Version](https://user-images.githubusercontent.com/16986422/43621694-7054a4f2-96e1-11e8-93f2-361086436e28.png)
-- Inside the Mobile:
+### Mobile App:
+
 ![Afwaj - Mobile Version](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/664/325/datas/gallery.jpg)
 
 ## Contributing
